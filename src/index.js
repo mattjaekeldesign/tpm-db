@@ -1,5 +1,10 @@
 require('dotenv').config()
 
+const cors = require('cors');
+app.use(cors({
+    origin: 'https://tpmexchange.webflow.io'
+}));
+
 document.getElementById('searchForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
