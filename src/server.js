@@ -11,6 +11,11 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors({
+    origin: 'https://tpmexchange.webflow.io'
+}));
+
 app.get('/search', async (req, res) => {
     try {
         const query = req.query.q;
