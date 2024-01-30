@@ -4,6 +4,7 @@ module.exports = {
   mode: "production",
   entry: {
     ["global"]: "./src/index.js",
+    ["server"]: ".src/server.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
